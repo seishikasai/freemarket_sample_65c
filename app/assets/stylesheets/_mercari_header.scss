@@ -44,6 +44,7 @@
           position: relative;
           z-index: 3;
           padding-right: 10px;
+          
         }
           .category-search {
             display: block;
@@ -51,6 +52,9 @@
             font-weight: 600;
             line-height: 36px;
             white-space: nowrap;
+            &:hover {
+              color: #0099E8;
+            }
           }
             .category-link {
               max-width: 100%;
@@ -72,6 +76,9 @@
             font-weight: 600;
             line-height: 36px;
             white-space: nowrap;
+            &:hover {
+              color: #0099E8;
+            }
           }
             .brand-link {
               max-width: 100%;
@@ -93,9 +100,6 @@
             padding: 9px 0;
             &:hover{
               color: #0099E8;
-              .top-menu__under__user-info__menu__link__icon {
-                color: #0099E8;
-              }
             }
             &__icon {
               color: #cccccc;
@@ -179,4 +183,118 @@
   color: #000 !important;
 }
 
+.header__menu-box {
+  height: 46px;
+  margin: 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--left {
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    ul {
+      li.header__menu-box--left__category {
+        font-weight: bold;
+        font-size:14px;
+        margin-right: 10px;
+        height: 55px;
+        line-height: 46px;
+        position: relative;
+        &:hover {
+          color: blue;
+          ul {
+            li {
+              display: block;
+              height: 44px;
+            }
+          }
+        }
+        .header__menu-box--left__parents ul {
+          position: absolute;
+          top: 44px;
+          z-index: 1000;
+          font-weight: normal;
+          .header__menu-box--left__parents__parent li {
+            width: 220px;
+            height: 0;
+            display: none;
+            background-color: white;
+            &:hover {
+              color: blue;
+              .header__menu-box--left__children {
+                &__child {
+                  display: block;
+                  height: 30px;
+                }
+              }
+            }
+            .category-searchs a {
+              // @include dropMenu_aTag(44px);
+              &:hover {
+                background-color: red;
+                color: white;
+              }
+            }
+            .header__menu-box--left__children {
+              position: absolute;
+              top: 0;
+              left: 220px;
+              z-index: 1000;
+              height: 616px;
+              background-color: white;
+              border-right: 1px solid gray;
+              &__child {
+                width: 220px;
+                height: 0;
+                display: none;
+                background-color: white;
+                &:hover {
+                  color: blue;
+                  .header__menu-box--left__grand-children {
+                    &__grand-child {
+                      display: block;
+                      height: 30px;
+                    }
+                  }
+                }
+                a {
+                  // @include dropMenu_aTag(30px);
+                  font-size: 14px;
+                  &:hover {
+                    background-color: #f3f3f3;
+                  }
+                }
+                .header__menu-box--left__grand-children {
+                  position: absolute;
+                  top: 0;
+                  left: 220px;
+                  z-index: 1000;
+                  height: 616px;
+                  background-color: white;
+                  border-right: 1px solid gray;
+
+                  &__grand-child {
+                    width: 300px;
+                    height: 0;
+                    display: none;
+                    background-color: white;
+                    a {
+                      // @include dropMenu_aTag(30px);
+                      font-size: 14px;
+                      &:hover {
+                        background-color: #f3f3f3;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
 

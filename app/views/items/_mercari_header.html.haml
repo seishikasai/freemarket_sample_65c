@@ -15,6 +15,47 @@
             = link_to "/", class:'category-search' do
               = icon('fas', 'list-ul', class: 'category-link')
               カテゴリーから探す
+            %ul.header__menu-box--left__parents 
+              %li.header__menu-box--left__parents__parent 
+                = link_to "レディース", class: 'category-searchs'
+                %ul.header__menu-box--left__children
+                  -# = render partial: "products/header_child", collection: @category_children1, as: "category"
+                  
+
+                  -#以下は"_header_child.html.haml"で切り出す部分
+                  %li.header__menu-box--left__childeren__child
+                    =link_to ""
+                    1
+                  %li.header__menu-box--left__childeren__child
+                    =link_to ""
+                    2
+                  %li.header__menu-box--left__childeren__child
+                    =link_to ""
+                    3
+                  %li.header__menu-box--left__childeren__child
+                    =link_to ""
+                    4
+                  %li.header__menu-box--left__childeren__child
+                    =link_to ""
+                    5
+                    %ul.header__menu-box--left__grand-children 
+                      
+                      -#以下は"_header_grand-child.html.haml"で切り出す部分
+                      %li.header__menu-box--left__grand-children__grand_child
+                        = link_to ""
+                        6
+                      %li.header__menu-box--left__grand-children__grand_child
+                        = link_to ""
+                        7
+                      %li.header__menu-box--left__grand-children__grand_child
+                        = link_to ""
+                        8
+                      %li.header__menu-box--left__grand-children__grand_child
+                        = link_to ""
+                        9
+                      %li.header__menu-box--left__grand-children__grand_child
+                        = link_to ""
+                        10
           %li.top-menu__under__search__brand
             = link_to "/", class:'brand-search' do
               = icon('fas', 'tags', class: "brand-link")
