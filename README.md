@@ -160,3 +160,7 @@
 #### Association
 - belongs_to :user
 - belongs_to :item
+
+TECK::CAMPのSlackアカウントが解除されてしまいました(泣
+今後ともチームメンバーのみなさんと連絡を取れる状況をつくるため、
+ご協力お願いいたします！
